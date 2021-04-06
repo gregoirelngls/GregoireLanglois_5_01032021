@@ -1,15 +1,19 @@
 /*#region Header */
 
-.backgroundLogo{
-    width:100%;
-    height:400px;
+header{
+    background-color:rgb(228, 226, 226);
 }
 
 .crumbs{
-    position:absolute;
-    top:2%;
-    right:10%;
-    list-style-type: none;
+    position: absolute;
+    top: 10%;
+    right: 12%;
+}
+
+h1{
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
 }
 
 .crumbs ol{    
@@ -35,7 +39,28 @@
     border-top:4px solid rgb(23, 2, 99);
 }
 
+.camera{
+    border: 3px solid grey;
+    margin-bottom: 2%;
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.card-price{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1%;
+    font-size: 1.7em;
+    color:grey;
+}
+
+.buttonAjouter{
+    text-decoration: none;
+    color:black;
+    font-weight:bold;
+}
 
 
 /*#endregion*/
@@ -43,56 +68,21 @@
 
 /*#region Main */
 
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 65vh;
+}
+
 span{
     font-weight:bold;
 }
 
-figure img{
-    width: 60%;
-    overflow:hidden;
-    border-radius:20px 0 0 20px;
-}
-
-#productList{
-    margin-left: 0%;
-    padding:0;
-}
 
 li a{
     text-decoration: none;;
 }
  
-
-figure{
-    border:1px solid rgb(87, 75, 75);
-    box-shadow: 7px 8px 10px 1px rgba(0, 0, 255, .2);
-    border-radius:20px;
-    display:flex;
-    margin-top:10%;
-    width: 70%;
-    margin-left: 15%;
-}
-
-figcaption{
-    width:40%;
-    background-color:rgba(225, 225, 245, 0.3);
-    position:relative;
-}
-
-#descriptif{
-    color:black;
-    margin-left: 2%;
-    font-size: 1.5em;
-    height: 60%;
-}
-
-h3{
-    text-align:center;
-    line-height:3em;
-    font-size:2em;
-    color:black;
-    font-weight:bold;
-}
 
 .fas{
     position:absolute;
@@ -116,7 +106,6 @@ h3{
 
 .foot{
     background: linear-gradient(#e66465, #9198e5);
-    width:100%;
     padding:5%;
     margin-top:7%;
     padding-left:0;
