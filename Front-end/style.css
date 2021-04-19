@@ -4,6 +4,10 @@ header{
     background-color:rgb(228, 226, 226);
 }
 
+body{
+    font-family:arial;
+}
+
 .crumbs{
     position: absolute;
     top: 10%;
@@ -53,7 +57,14 @@ h1{
     justify-content: flex-end;
     margin: 1%;
     font-size: 1.7em;
-    color:grey;
+    color:rgb(92, 92, 92);
+}
+
+.card-title{
+    text-align: center;
+    background-color: rgb(210, 132, 247);
+    font-size: 2em;
+    margin:0;
 }
 
 .buttonAjouter{
@@ -97,6 +108,16 @@ li a{
 }
 .item{
     list-style-type:none;
+}
+
+.appareil{
+    border: 1px solid black;
+    width: 60%;
+}
+
+#Cameras{
+    display: flex;
+    justify-content: center;
 }
 
 

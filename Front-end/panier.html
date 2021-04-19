@@ -14,14 +14,12 @@
             <div id=logo> <img src="./images/logo.png" alt="Logo Orinoco"></div>
             <nav class="crumbs">
                 <ol>
-                    <li class="crumb"><a href="#">Accueil</a></li>
+                    <li class="crumb"><a href="index.html">Accueil</a></li>
                     <li class="crumb"><a href="#">Panier</a></li>
                 </ol>
             </nav>
         </header>
         <h1 class="titre"> Nos Cameras</h1>
-        <p>Pour passer commande</p>
-
         <section class="recap-commande">
             <table>
                 <thead>
@@ -31,9 +29,13 @@
                     <th>Prix Unitaire</th>
                     </tr>
                 </thead>
-                <tbody id="container">
-
+                 <tbody id="container">
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <th id="finalPrice"></th>
+                    </tr>
+                </tfoot>
             </table>
             <button id="viderPanier" class="viderPanier">Vider tous le Panier </button>
         </section>
@@ -79,13 +81,23 @@
         <p>* Champ Obligatoire</p>
     </form>
 
-  <footer>
-    <ul>
-      <li><a href="#"> Propos</a></li>
-      <li><a href="#"> Privée</a></li>
-      <li><a href="#">Conditions d'utilisations</a></li>
-    </ul>
-  </footer>
+    <footer>
+        <div class="foot">
+            <div class="socialNetwork">
+                <a href ="#"><i class="fab fa-facebook-f"></i></a>
+                <a href ="#"><i class="fab fa-instagram"></i></a>
+                <a href ="#"><i class="fab fa-twitter"></i></a>
+                <a href ="#"><i class="fab fa-snapchat"></i></a>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li> <a href="#"> Contact </a></li>
+                    <li> <a href="#"> A propos </a></li>
+                    <li> <a href="#"> Nos partenaires </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
   <script src="camera.js"></script>
   <script src="panier.js"></script>
 </body>
