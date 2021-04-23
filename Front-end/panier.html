@@ -32,7 +32,7 @@
                  <tbody id="container">
                 </tbody>
                 <tfoot>
-                    <tr>
+                    <tr class="finalPriceDispo">
                         <th id="finalPrice"></th>
                     </tr>
                 </tfoot>
@@ -41,14 +41,6 @@
         </section>
 
         <form action="#" method="POST" id="form">
-        <div>
-            <input type="radio" id="Mr" name="drone" value="Mr" checked>
-            <label for="Mr">Mr</label>
-
-            <input type="radio" id="Mme" name="drone" value="Mme">
-            <label for="Mme">Mme</label>
-        </div>
-
         <div>
             <label for="nom">Nom *:</label><br />
             <input type="text" id="nom" name="nom" required="required" placeholder="Arthur" />
@@ -73,14 +65,14 @@
         <div>
             <label for="email">E-mail *:</label><br />
             <input type="email" id="email" name="email" required="required" placeholder="Arthur@hotmail.fr"
-                pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}" />
+                pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+                />
         </div>
 
         <input type="submit" value="Commander" id="envoiFormulaire" />
 
         <p>* Champ Obligatoire</p>
     </form>
-
     <footer>
         <div class="foot">
             <div class="socialNetwork">

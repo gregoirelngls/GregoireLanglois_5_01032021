@@ -1,11 +1,9 @@
-
-
-//RECUPERATION DE L URL
+//Récupération de l'URL
 let params = (new URL(document.location)).searchParams;
 
-//STOCK L ID 
+//Stockage de l'ID dans une variable
 const id = params.get("id");
-console.log(id);
+//console.log(id);
 
 //EMPLACEMENT HTML
 let container = document.getElementById("Cameras");
@@ -17,13 +15,10 @@ request.send();
 
 request.onreadystatechange = function(){
   if (request.readyState === 4){
-      // document.getElementById('Cameras').innerHTML = (request.responseText)
-      //console.log(request.responseText);
-
-
-      //Récupère toutes les cameras
-      var camera = JSON.parse(request.responseText);
-      display(camera);
+    //console.log(request.responseText);
+    //Récupère toutes les cameras
+    var camera = JSON.parse(request.responseText);
+    display(camera);
   }
 }
 
@@ -32,41 +27,36 @@ const display = camera => {
   let options = document.getElementById('option');
   for(let lense of camera.lenses){
     options.innerHTML+= '<option value="test">'+ lense +'</option>';
-  }
+}
 // Affichage contenu HTML
-    Cameras.innerHTML +=`
-      <div class="appareil" id="cardsProduct">
-        <img src=${camera.imageUrl} alt="">
-        <div class="description">
-          <p class="nom">${camera.name}</p>
-          <span class="appareil-description">
-            ${camera.description}
-          </span>
-          <p class="prix"> Prix Unitaire: ${camera.price/ 100}€</p>        
-         <a href="panier.html" button type ="button" id="panier"> Ajouter au panier</button> </a>
-        </div>
-      </div>`;
-      var btn = document.getElementById('panier');
-      btn.onclick = function() {
-        addToLocalStorage(camera);
-      }
-    }
-
-    // Envoi au Local Storage
-    const addToLocalStorage = (camera) => {
-      console.log(camera);
-      const cameraItem = localStorage.getItem("cameras");
-      if (cameraItem){
-        cameraArray = JSON.parse(cameraItem);
-    } else {
-        cameraArray=[];
-    }
-    cameraArray.push(camera);
-    localStorage.setItem("cameras", JSON.stringify(cameraArray));
+Cameras.innerHTML +=`
+  <div class="appareil" id="cardsProduct">
+    <img src=${camera.imageUrl} alt="">
+    <div class="description">
+      <p class="nom">${camera.name}</p>
+      <span class="appareil-description">${camera.description}</span>
+      <p class="prix"> Prix Unitaire: ${camera.price/ 100}€</p>        
+      <a href="panier.html" button type ="button" id="panier"> Ajouter au panier</button> </a>
+    </div>
+  </div>`;
+  var btn = document.getElementById('panier');
+  btn.onclick = function() {
+    addToLocalStorage(camera);
   }
+}
 
+// Envoi au Local Storage
+const addToLocalStorage = (camera) => {
+  console.log(camera);
+  const cameraItem = localStorage.getItem("cameras");
+  if (cameraItem){
+    cameraArray = JSON.parse(cameraItem);
+} else {
+    cameraArray=[];
+}
+cameraArray.push(camera);
+localStorage.setItem("cameras", JSON.stringify(cameraArray));
+}
 
-
-// Choix Option
 
 

@@ -23,12 +23,11 @@ function allCameras() {
             <td class="srcimage"><img src=${cameras[i].imageUrl} alt="" /></td>
             <td>${cameras[i].name}</td>
             <td>${cameras[i].price / 100} €</td>
-            <td><i class="fas fa-trash-alt"></i></td>
         </tr>
       `; 
     }
     container.innerHTML+=`
-    <tr>
+    <tr class="totaux">
     <td> Prix total du panier </td>
     </tr>`
     
@@ -64,7 +63,8 @@ function deleteAll() {
 function envoiCommande() {
     let form = document.getElementById("form");
 
-/// SI LE FORMULAIRE EST CORRECTEMENT REMPLI ET QUE LE PANIER CONTIENT AU MOINS UN ARTICLE, ON VALIDE LES DONNEES DU FORMULAIRE
+/// SI LE FORMULAIRE EST CORRECTEMENT REMPLI ,
+/// ET QUE LE PANIER CONTIENT AU MOINS UN ARTICLE, ON VALIDE LES DONNEES DU FORMULAIRE
     if (form.reportValidity() == true && addIdBasket.length>0) {
       let contact = {
         'firstName': document.getElementById("nom").value,
@@ -102,6 +102,7 @@ function envoiCommande() {
         // PROPRIETE UTILISEE POUR CHARGER UNE AUTRE PAGE
           window.location.assign("confirmation.html?orderId=" + r.orderId);
         })
+
         //SI PROBLEME API
         .catch(function (err) {
         });

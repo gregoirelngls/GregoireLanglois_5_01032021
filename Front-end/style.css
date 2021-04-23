@@ -120,6 +120,71 @@ li a{
     justify-content: center;
 }
 
+.nom{
+    text-align: center;
+    font-size: 2em;
+    background-color: violet;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+.prix{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#panier{
+        text-decoration: none;
+        color: black;
+        font-size: 1.5em;
+        background-color: violet;
+        position: right;
+        float: right;
+        padding: 1%;
+}
+
+tr td{
+    border: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+    margin-top:4%;
+}
+
+.srcimage{
+    width:65%;
+}
+
+.totaux{
+    padding: 4%;
+    background-color: blueviolet;
+    font-size: 1.5em;
+}
+
+#viderPanier{
+    margin-bottom: 10%;
+    text-align: center;
+    padding: 1%;
+    font-weight: bold;
+    margin-top:2%;
+}
+
+#finalPrice{
+    font-size: 1.5em;
+}
+
+form{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 4%;
+    border-radius: 3%;
+    background-color: lightgoldenrodyellow;
+    margin-left: 35%;
+}
+ form div{
+     padding-top: 7%;
+ }
+
 
 /*#endregion*/
 
@@ -141,6 +206,10 @@ li a{
     justify-content: space-around;
 }
 
+.socialNetwork a{
+    color:black;
+}
+
 .contact ul{
     list-style-type: none;
     display: flex;
@@ -148,6 +217,10 @@ li a{
     padding-top: 4%;
     font-size: 2em;
     font-weight: bold;
+}
+
+.contact a{
+    color:black;
 }
 
 
