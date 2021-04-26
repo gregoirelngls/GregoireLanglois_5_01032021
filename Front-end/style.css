@@ -10,7 +10,7 @@ body{
 
 .crumbs{
     position: absolute;
-    top: 10%;
+    top: 7%;
     right: 12%;
 }
 
@@ -46,10 +46,27 @@ h1{
 .camera{
     border: 3px solid grey;
     margin-bottom: 2%;
-    width: 50%;
+    width: 40%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.list div{
+    margin-bottom: 5%;
+    display: flex;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card-price{
@@ -82,7 +99,7 @@ h1{
 img{
     width: 100%;
     object-fit: cover;
-    height: 65vh;
+    height: 45vh;
 }
 
 span{
@@ -116,8 +133,17 @@ li a{
 }
 
 #Cameras{
+    position: relative;
     display: flex;
     justify-content: center;
+}
+
+.options{
+    position: absolute;
+    top: 88%;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: bisque;
 }
 
 .nom{
@@ -135,13 +161,14 @@ li a{
 }
 
 #panier{
-        text-decoration: none;
-        color: black;
-        font-size: 1.5em;
-        background-color: violet;
-        position: right;
-        float: right;
-        padding: 1%;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    background-color: violet;
+    position: right;
+    float: right;
+    padding: 1%;
+    border: 1px solid black;
 }
 
 tr td{
@@ -162,7 +189,7 @@ tr td{
 }
 
 #viderPanier{
-    margin-bottom: 10%;
+    margin-bottom: 6%;
     text-align: center;
     padding: 1%;
     font-weight: bold;
@@ -222,7 +249,6 @@ form{
 .contact a{
     color:black;
 }
-
 
 /*endregion*/
 
