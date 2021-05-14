@@ -3,19 +3,16 @@ let params = (new URL(document.location)).searchParams;
 
 //Stockage de l'ID dans une variable
 const id = params.get("id");
-//console.log(id);
 
 //EMPLACEMENT HTML
 let container = document.getElementById("Cameras");
 let url = "http://localhost:3000/api/cameras/" + id;
-console.log(url);
 var request = new XMLHttpRequest(); 
 request.open("GET", url , true);
 request.send();
 
 request.onreadystatechange = function(){
   if (request.readyState === 4){
-    //console.log(request.responseText);
     //Récupère toutes les cameras
     var camera = JSON.parse(request.responseText);
     display(camera);
@@ -45,10 +42,10 @@ Cameras.innerHTML +=`
   }
 }
 
+
 // Envoi au Local Storage
 const addToLocalStorage = (camera) => {
-  console.log(camera);
-  const cameraItem = localStorage.getItem("cameras");
+const cameraItem = localStorage.getItem("cameras");
   if (cameraItem){
     cameraArray = JSON.parse(cameraItem);
 } else {
@@ -57,6 +54,5 @@ const addToLocalStorage = (camera) => {
 cameraArray.push(camera);
 localStorage.setItem("cameras", JSON.stringify(cameraArray));
 }
-
 
 

@@ -40,36 +40,40 @@
             <button id="viderPanier" class="viderPanier">Vider tous le Panier </button>
         </section>
 
-        <form action="#" method="POST" id="form">
+        <form method="POST" id="form">
         <div>
             <label for="nom">Nom *:</label><br />
-            <input type="text" id="nom" name="nom" required="required" placeholder="Arthur" />
+            <input type="text" id="lastName" name="nom" minlength="3" required="required" placeholder="Arthur" />
+            <small id="missNom"></small>
         </div>
 
         <div>
             <label for="prenom">Prenom *:</label><br />
-            <input type="text" id="prenom" name="prenom" required="required" placeholder="Richard" />
+            <input type="text" id="firstName" name="prenom" required="required" placeholder="Richard" />
+            <small id="missPrenom"></small>
         </div>
 
         <div>
             <label for="adresse">Adresse *:</label><br />
-            <input type="text" id="adresse" name="adresse" required="required" placeholder="12 rue de la Villette" />
+            <input type="text" id="address" name="adresse" required="required" placeholder="12 rue de la Villette" />
+            <small id="missAddress"></small>
         </div>
 
         <div>
             <label for="ville">Ville *:</label><br />
-            <input type="text" id="ville" name="text" required="required" placeholder=" Amiens "
-                pattern="^[a-zA-Z]{1}[a-zA-Z'À-ÿ -]+$" />
+            <input type="text" id="city" name="text" required="required" placeholder=" Amiens "
+            pattern="^[a-zA-Z]{1}[a-zA-Z'À-ÿ -]+$" />
+            <small id="missCity"></small>
         </div>
 
         <div>
             <label for="email">E-mail *:</label><br />
             <input type="email" id="email" name="email" required="required" placeholder="Arthur@hotmail.fr"
-                pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
-                />
+            pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"/>
+            <small id="missMail"></small>
         </div>
 
-        <input type="submit" value="Commander" id="envoiFormulaire" />
+        <input type="button" value="Commander" id="envoiFormulaire" />
 
         <p>* Champ Obligatoire</p>
     </form>

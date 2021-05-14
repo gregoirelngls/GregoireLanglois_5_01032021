@@ -15,7 +15,7 @@ function display (){
         <p>
         Nous vous remerçions  ${contact.firstName } ${contact.lastName} 
         </p>
-        <hr>
+        <br>
         <p>Votre commande a bien été reçue sous le N° ${orderId} </br>
         Pour un montant de :${prixTotal}  </br>
         </p>
@@ -24,4 +24,5 @@ function display (){
 };
 
 display();
+
 
