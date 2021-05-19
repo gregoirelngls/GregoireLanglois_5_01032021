@@ -7,14 +7,13 @@ const id = params.get("id");
 //EMPLACEMENT HTML
 let container = document.getElementById("Cameras");
 let url = "http://localhost:3000/api/cameras/" + id;
-var request = new XMLHttpRequest(); 
 request.open("GET", url , true);
 request.send();
 
 request.onreadystatechange = function(){
   if (request.readyState === 4){
     //Récupère toutes les cameras
-    var camera = JSON.parse(request.responseText);
+    let camera = JSON.parse(request.responseText);
     display(camera);
   }
 }
@@ -25,6 +24,7 @@ const display = camera => {
   for(let lense of camera.lenses){
     options.innerHTML+= '<option value="test">'+ lense +'</option>';
 }
+
 // Affichage contenu HTML
 Cameras.innerHTML +=`
   <div class="appareil" id="cardsProduct">
@@ -33,13 +33,24 @@ Cameras.innerHTML +=`
       <p class="nom">${camera.name}</p>
       <span class="appareil-description">${camera.description}</span>
       <p class="prix"> Prix Unitaire: ${camera.price/ 100}€</p>        
-      <a href="panier.html" button type ="button" id="panier"> Ajouter au panier</button> </a>
+      <button type="button" id="panier"> Ajouter au panier </button>
     </div>
   </div>`;
-  var btn = document.getElementById('panier');
+  let btn = document.getElementById('panier');
   btn.onclick = function() {
-    addToLocalStorage(camera);
+    if(checkForm()) {
+      addToLocalStorage(camera);
+      window.location.replace("panier.html");
+    }
   }
+}
+
+function checkForm(){
+  let e = document.getElementById("option").value;
+  if(e==="0"){
+      alert("Veuillez selectionner un choix de lentilles");
+      return false;
+  } return true;
 }
 
 
@@ -54,5 +65,3 @@ const cameraItem = localStorage.getItem("cameras");
 cameraArray.push(camera);
 localStorage.setItem("cameras", JSON.stringify(cameraArray));
 }
-
-

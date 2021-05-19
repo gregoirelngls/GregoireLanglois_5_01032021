@@ -116,15 +116,15 @@ function envoiCommande(contact) {
 
   // FONCTION PERMETTANT DE BLOQUER L'EXECUTION DE LA FONCTION envoiCommande SI REGLES REGEXP NON RESPECTEES
   function isInvalid(contact) {
-    var goodName = /^(?=.{1,50}$)[a-z-]+(?:['_.\s][a-z]+)*$/i;
-    var goodEmail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-    var goodAddress = /^[a-zA-Z0-9\s]{2,}$/;
+    let goodName = /^(?=.{1,50}$)[a-z-]+(?:['_.\s][a-z]+)*$/i;
+    let goodEmail = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    let goodAddress = /^[a-zA-Z0-9\s]{2,}$/;
   
-    var firstNameError = document.getElementById('missPrenom');
-    var lastNameError = document.getElementById('missNom');
-    var emailError = document.getElementById('missMail');
-    var addressError = document.getElementById('missAddress');
-    var cityError = document.getElementById('missCity');
+    let firstNameError = document.getElementById('missPrenom');
+    let lastNameError = document.getElementById('missNom');
+    let emailError = document.getElementById('missMail');
+    let addressError = document.getElementById('missAddress');
+    let cityError = document.getElementById('missCity');
   
     // validation de prénom
     if (!goodName.test(contact.firstName)) {

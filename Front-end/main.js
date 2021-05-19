@@ -1,4 +1,4 @@
-var request = new XMLHttpRequest();
+let request = new XMLHttpRequest();
 request.open("GET", "http://localhost:3000/api/cameras", true);
 request.send();
 
@@ -26,7 +26,6 @@ function renderHTML(cameras) { //fonction de création du contenu HTML
     const sectionCameras = document.getElementById("Cameras") //Récupération de l'ID Cameras pour y placer le contenu
     sectionCameras.appendChild(div); //le contenu (ci-dessus) est placé dans la div "Cameras"(html)
 };
-    
     
 
 

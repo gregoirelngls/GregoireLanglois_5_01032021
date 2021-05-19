@@ -158,12 +158,13 @@ li a{
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
+    padding-bottom: 2%;
 }
 
 #panier{
     text-decoration: none;
     color: black;
-    font-size: 1.5em;
+    font-size: 1.2em;
     background-color: violet;
     position: right;
     float: right;
@@ -252,6 +253,121 @@ form{
 
 /*endregion*/
 
+@media screen and (max-width: 1204px){
+    #envoiFormulaire{
+        margin-top: 5%;
+        font-size: 1.7em;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border-radius: 25px;
+    }
 
+    #viderPanier {
+        margin-bottom: 6%;
+        text-align: center;
+        padding: 1%;
+        font-weight: bold;
+        margin-top: 2%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.6em;
+        border-radius: 25px;
+    }
+
+    form {
+        width: 40%;
+        margin-left: auto;
+        display: block;
+        margin-right: auto;
+    }
+
+    form div{
+        font-size: 1.5em;
+    }
+
+    form div input{
+        font-size: 1em;
+        width: 97%;
+    }
+}
+
+
+@media screen and (max-width: 800px){
+/*#Région Main */
+    #Cameras div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space space-between;
+        justify-content: center;
+    }
+
+    .contact a{
+        font-size:0.5em;
+    }
+
+    .crumb a {
+        text-decoration: none;
+        font-size: 3vw;
+    }
+    /*endregion*/
+
+    /*#Région Produit */
+    .prix {
+        margin-bottom: 10%;
+    }
+
+    .options {
+        top: 85%;
+    }
+
+    #panier{
+        text-align:center;
+    }
+    /*endregion*/
+
+    /* #Région Panier */
+
+    form {
+        width: 60%;
+        margin-left: auto;
+        display: block;
+        margin-right: auto;
+    }
+
+    form div{
+        font-size: 1.5em;
+    }
+
+    form div input{
+        font-size: 1em;
+        width: 97%;
+    }
+
+    #envoiFormulaire{
+        margin-top: 5%;
+        font-size: 1.7em;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border-radius: 25px;
+    }
+
+    #viderPanier {
+        margin-bottom: 6%;
+        text-align: center;
+        padding: 1%;
+        font-weight: bold;
+        margin-top: 2%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.6em;
+        border-radius: 25px;
+    }
+}
+/*#endregion*/
 
 
